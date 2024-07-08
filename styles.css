@@ -1,3 +1,4 @@
+/* General Styles */
 html {
     border-left: 5px solid  rgb(199, 193, 193);
     /* margin-left: 10rem; */
@@ -9,19 +10,24 @@ body {
     margin: 0 auto;
     min-height: 100vh;
     padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
 }
 
 header, main, footer {
     padding: 1rem 2rem;
 }
 
+
 h1 {
     color: tomato;
 }
 
+/* Navigation and Links */
 nav ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
     display: flex;
     justify-content: space-between;
 }
@@ -29,6 +35,7 @@ nav ul {
 nav a {
     text-decoration: none;
     color: lightgray;
+    font-size: 1.2rem;
 }
 
 article {
@@ -37,15 +44,38 @@ article {
     padding-bottom: 2rem;
 }
 
+article p::first-letter {
+    font-size: 2em; /* Larger first letter */
+    color: lightgray;
+}
+
 article a {
+    display: block;
+    text-align: right;
+    font-weight: bold;
     color: tomato;
     text-decoration: none;
-    font-weight: 900;
+    
 }
 article img {
     width: 100%;
 }
 
-footer a {
-    color: tomato;
+footer nav a {
+    color: tomato;  /* Differen color for footer navigation  */
+}
+
+/* Blog Posts */
+article h3 {
+    font-size: 1.5em;  /* Larger titles for blog posts */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+footer nav {
+    justify-content: center;  /* Center footer navigation differently */
 }
